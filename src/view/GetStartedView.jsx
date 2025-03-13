@@ -21,7 +21,7 @@ const GetStartedView = () => {
     const handleSubmit = async(e) => {
         e.preventDefault();
         if(!password || !email){
-            toast.error('Feilds is missing')
+            toast.error('Both fields are required to continue')
             return;
         }
         if(!isValidEmail(email)){
@@ -106,12 +106,12 @@ const GetStartedView = () => {
               <div className="flex flex-col bg-blue-300 rounded-md p-4" >
                 <div className="flex items-center justify-between">
                   <p className="block text-sm/6 font-medium text-gray-900">
-                    Test password: <span className="font-bold">{testPassword}</span>
+                    Test email: <span className="font-bold">{testEmail}</span>
                   </p>
                 </div>
                 <div className="flex items-center justify-between">
                   <p className="block text-sm/6 font-medium text-gray-900">
-                    Test email: <span className="font-bold">{testEmail}</span>
+                    Test password: <span className="font-bold">{testPassword}</span>
                   </p>
                 </div>
               </div>
