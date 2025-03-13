@@ -21,8 +21,14 @@ const GetStartedView = () => {
     const handleSubmit = async(e) => {
         e.preventDefault();
         if(!password || !email){
-            toast.error('Both fields are required to continue')
+          if(!email){
+            toast.error('Email is required')
             return;
+          }
+          if(!password){
+            toast.error('Password is required')
+            return;
+          }
         }
         if(!isValidEmail(email)){
             toast.error('Email is not valid')
